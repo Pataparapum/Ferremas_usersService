@@ -14,11 +14,11 @@ public class cardDataModel {
     private Long cardId;
 
     @ManyToOne
-    @JoinColumn(name="userId")
+    @JoinColumn(name="userCId")
     private userClientModel userId;
 
     @Column(length = 16, nullable = false)
-    private int numero;
+    private String numero;
 
     @Column(nullable = false)
     private Date fechaV;
@@ -41,9 +41,9 @@ public class cardDataModel {
 
     public void setUserId(userClientModel userId) {this.userId = userId;}
 
-    public int getNumero() {return numero;}
+    public String getNumero() {return numero;}
 
-    public void setNumero(int numero) {this.numero = numero;}
+    public void setNumero(String numero) {this.numero = numero;}
 
     public Date getFechaV() {return fechaV;}
 

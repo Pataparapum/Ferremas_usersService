@@ -9,10 +9,9 @@ import java.util.Date;
 
 public interface cardProyection {
     Long getCardId();
-    userClientModel getUserId();
-    int getNumero();
+    Long getUserCId();
+    String getNumero();
     Date getFechaV();
-    int getCVV();
     String getNombrePropietario();
 
 }

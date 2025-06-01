@@ -10,12 +10,12 @@ import java.util.List;
 
 public interface cardRepository extends JpaRepository<cardDataModel, Long> {
 
-    @Query(value = "select c.nombre_propietario, c.numero, c.fechav, u.usercid " +
+    @Query(value = "select c.card_id, c.nombre_propietario, substring(c.numero from 5 for 4) as numero, c.fechav, u.usercid " +
             "from card_data_model c join user_client_model u " +
             "on (c.user_id = :id) ", nativeQuery = true)
     List<cardProyection> findCardsFromClientId(@Param("id") Long clientId);
 
-    @Query(value = "select c.nombre_propietario, c.numero, c.fechav, u.usercid " +
+    @Query(value = "select c.card_id, c.nombre_propietario, substring(c.numero from 5 for 4) as numero, c.fechav, u.usercid " +
             "from card_data_model c join user_client_model u " +
             "on (c.user_id = :clientId ) " +
             "where c.card_id = :cardId", nativeQuery = true)

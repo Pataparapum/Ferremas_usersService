@@ -5,11 +5,10 @@ import com.ferremasGateway.ferremas_gateway.Models.userClientModel;
 import com.ferremasGateway.ferremas_gateway.Repositories.typeUserRepository;
 import com.ferremasGateway.ferremas_gateway.Repositories.userRepository;
 import com.ferremasGateway.ferremas_gateway.proyection.userClientProyection;
-import com.ferremasGateway.ferremas_gateway.proyection.userNewDataDto;
+import com.ferremasGateway.ferremas_gateway.Dto.userNewDataDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 

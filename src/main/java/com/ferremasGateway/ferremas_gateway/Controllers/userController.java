@@ -2,7 +2,7 @@ package com.ferremasGateway.ferremas_gateway.Controllers;
 
 import com.ferremasGateway.ferremas_gateway.proyection.userClientProyection;
 import com.ferremasGateway.ferremas_gateway.Models.userClientModel;
-import com.ferremasGateway.ferremas_gateway.proyection.userNewDataDto;
+import com.ferremasGateway.ferremas_gateway.Dto.userNewDataDto;
 import com.ferremasGateway.ferremas_gateway.service.userCService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

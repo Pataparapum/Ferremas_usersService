@@ -1,7 +1,7 @@
 package com.ferremasGateway.ferremas_gateway.Controllers;
 
 import com.ferremasGateway.ferremas_gateway.Models.userFuncionarioModel;
-import com.ferremasGateway.ferremas_gateway.proyection.userFNewDataDto;
+import com.ferremasGateway.ferremas_gateway.Dto.userFNewDataDto;
 import com.ferremasGateway.ferremas_gateway.proyection.userFProyection;
 import com.ferremasGateway.ferremas_gateway.service.userFService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -4,12 +4,11 @@ import com.ferremasGateway.ferremas_gateway.Models.typeUserModel;
 import com.ferremasGateway.ferremas_gateway.Models.userFuncionarioModel;
 import com.ferremasGateway.ferremas_gateway.Repositories.typeUserRepository;
 import com.ferremasGateway.ferremas_gateway.Repositories.userFuncionaryRepository;
-import com.ferremasGateway.ferremas_gateway.proyection.userFNewDataDto;
+import com.ferremasGateway.ferremas_gateway.Dto.userFNewDataDto;
 import com.ferremasGateway.ferremas_gateway.proyection.userFProyection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.List;

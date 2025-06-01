@@ -19,9 +19,10 @@ public class cardController {
     @GetMapping("/{clientId}")
     public ResponseEntity<List<cardProyection>> getCardsFromClient(@PathVariable Long clientId) { return service.getCardsFromClientId(clientId); }
 
-    @GetMapping("/client")
-    public ResponseEntity<cardProyection> getCardFromClientById(@RequestParam Long clientId, @RequestParam Long cardId) {
-        return service.getCardFromCLientIdById(clientId, cardId);
+    @GetMapping("/one/{clientId}")
+    public ResponseEntity<cardProyection> getCardFromClientById(@PathVariable Long clientId, @RequestParam String cardId) {
+        Long idCard = Long.parseLong(cardId);
+        return service.getCardFromCLientIdById(clientId, idCard);
     }
 
     @PostMapping("/post/{userId}")
