@@ -1,0 +1,31 @@
+package com.ferremasGateway.ferremas_gateway.proyection;
+
+public class userFNewDataDto {
+    String nombres;
+    String apellidos;
+    String contrasena;
+
+    public String getNombres() {
+        return nombres;
+    }
+
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellidos = apellido;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+}
