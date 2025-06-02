@@ -16,7 +16,6 @@ import java.util.List;
 @Service
 public class cardService {
 
-    private static final Logger log = LoggerFactory.getLogger(cardService.class);
     @Autowired
     private cardRepository cardR;
 
@@ -48,7 +47,6 @@ public class cardService {
                 .orElseThrow();
 
         newCard.setUserId(user);
-        log.info("data: "+ user);
 
         cardR.save(newCard);
     }
@@ -56,4 +54,5 @@ public class cardService {
     public void deleteCard(Long cardId) {
         cardR.deleteById(cardId);
     }
+
 }
