@@ -11,7 +11,7 @@ public class listaPedidosModel {
     private Long pedidoId;
 
     @ManyToOne
-    @JoinColumn(name = "userId")
+    @JoinColumn(name = "userCId")
     private userClientModel userId;
 
     @Column

@@ -4,6 +4,7 @@ import com.ferremasGateway.ferremas_gateway.Models.listaPedidosModel;
 import com.ferremasGateway.ferremas_gateway.Models.userClientModel;
 import com.ferremasGateway.ferremas_gateway.Repositories.pedidosRepository;
 import com.ferremasGateway.ferremas_gateway.Repositories.userRepository;
+import com.ferremasGateway.ferremas_gateway.proyection.pedidosProyection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,8 +25,8 @@ public class pedidosService {
     @Autowired
     private userRepository userR;
 
-    public ResponseEntity<List<listaPedidosModel>> getPedidosFromClient(Long clientId) {
-        List <listaPedidosModel> pedido = pedidoR.findAllPedidoFromClient(clientId);
+    public ResponseEntity<List<pedidosProyection>> getPedidosFromClient(Long clientId) {
+        List <pedidosProyection> pedido = pedidoR.findAllPedidoFromClient(clientId);
 
         if (pedido == null) {
             return ResponseEntity.notFound().build();
@@ -34,8 +35,8 @@ public class pedidosService {
         return ResponseEntity.ok(pedido);
     }
 
-    public ResponseEntity<listaPedidosModel> getPedidoFromClientById(Long clientId, Long pedidoId) {
-        listaPedidosModel pedido = pedidoR.findPedidoFromClientById(clientId, pedidoId);
+    public ResponseEntity<pedidosProyection> getPedidoFromClientById(Long clientId, Long pedidoId) {
+        pedidosProyection pedido = pedidoR.findPedidoFromClientById(clientId, pedidoId);
 
         if (pedido == null) {
             return ResponseEntity.notFound().build();
